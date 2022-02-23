@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+  <h1 class="d-flex justify-content-center m-3">Модель визначення умінь студентів</h1>
+
+  <div class="d-flex flex-row m-1 justify-content-around ">
+
+    <!-- Novice level -->
+    <div class="questions">
+      <div class="bg-light rounded flex justify-content-center p-2 my-2">
+        <h1>Novice</h1>
+        <p>Переживаєте за успіх в роботі</p>
+        <input type="radio" id="novice1" name="novice1" value="5">
+        <label for="novice1">сильно</label>
+        <input type="radio" id="novice2" name="novice1" value="3">
+        <label for="novice2">не дуже</label>
+        <input type="radio" id="novice3" name="novice1" value="2">
+        <label for="novice3">спокійний</label>
+
+        <p>Прагнете досягти швидко результату</p>
+        <input type="radio" id="novice4" name="novice2" value="5">
+        <label for="novice4">дуже</label>
+        <input type="radio" id="novice5" name="novice2" value="3">
+        <label for="novice5">якомога швидше</label>
+        <input type="radio" id="novice6" name="novice2" value="2">
+        <label for="novice6">поступово</label>
+
+        <p>Легко попадаєте в тупик при проблемах в роботі</p>
+        <input type="radio" id="novice7" name="novice3" value="5">
+        <label for="novice7">неодмінно</label>
+        <input type="radio" id="novice8" name="novice3" value="3">
+        <label for="novice8">поступово</label>
+        <input type="radio" id="novice9" name="novice3" value="2">
+        <label for="novice9">зрідка</label>
+
+        <p>Чи потрібен чіткий алгоритм для вирішення задач</p>
+        <input type="radio" id="novice10" name="novice4" value="5">
+        <label for="novice10">так</label>
+
+        <input type="radio" id="novice11" name="novice4" value="3">
+        <label for="novice11">в окремих випадках</label>
+
+        <input type="radio" id="novice12" name="novice4" value="2">
+        <label for="novice12">не потрібен</label>
+
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary w-50 mx-1 mt-3" id="noviceSubmit">Submit</button>
+        </div>
+      </div>
+
+      <!-- Advanced beginner level -->
+      <div class="bg-light rounded p-2 my-2">
+        <h3>Advanced beginner</h3>
+        <p>Чи використовуєте власний досвід при вирішенні задач</p>
+        <input type="radio" id="beginner1" name="beginner1" value="5">
+        <label for="beginner1">зрідка</label>
+        <input type="radio" id="beginner2" name="beginner1" value="3">
+        <label for="beginner2">частково</label>
+        <input type="radio" id="beginner3" name="beginner1" value="2">
+        <label for="beginner3">ні</label>
+
+        <p>Чи користуєтесь фіксованими правилами для вирішення задач</p>
+        <input type="radio" id="beginner4" name="beginner2" value="5">
+        <label for="beginner4">не потрібні</label>
+        <input type="radio" id="beginner5" name="beginner2" value="3">
+        <label for="beginner5">в окремих випадках</label>
+        <input type="radio" id="beginner6" name="beginner2" value="2">
+        <label for="beginner6">так</label>
+
+        <p>Чи відчуваєте ви загальний контекст вирішення задачі</p>
+        <input type="radio" id="beginner7" name="beginner3" value="5">
+        <label for="beginner7">в окремих випадках</label>
+        <input type="radio" id="beginner8" name="beginner3" value="3">
+        <label for="beginner8">частково</label>
+        <input type="radio" id="beginner9" name="beginner3" value="2">
+        <label for="beginner9">так</label>
+
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary w-50 mx-1 mt-3" id="beginnerSubmit">Submit</button>
+        </div>
+
+      </div>
+
+      <!-- Competent level -->
+      <div class="bg-light rounded p-2 my-2">
+        <h3>Competent</h3>
+
+        <p>Чи можете ви побудувати модель вирішуваної задачі</p>
+        <input type="radio" id="competent1" name="competent1" value="5">
+        <label for="competent1">так</label>
+        <input type="radio" id="competent2" name="competent1" value="3">
+        <label for="competent2">не повністю</label>
+        <input type="radio" id="competent3" name="competent1" value="2">
+        <label for="competent3">в окремих випадках</label>
+
+        <p>Чи вистачає вам ініціативи при вирішенні задач</p>
+        <input type="radio" id="competent4" name="competent2" value="5">
+        <label for="competent4">так</label>
+        <input type="radio" id="competent5" name="competent2" value="3">
+        <label for="competent5">зрідка</label>
+        <input type="radio" id="competent6" name="competent2" value="2">
+        <label for="competent6">потрібне натхнення</label>
+
+        <p>Чи можете вирішувати проблеми, з якими ще не стикались</p>
+        <input type="radio" id="competent7" name="competent3" value="5">
+        <label for="competent7">так</label>
+        <input type="radio" id="competent8" name="competent3" value="3">
+        <label for="competent8">в окремих випадках</label>
+        <input type="radio" id="competent9" name="competent3" value="2">
+        <label for="competent9">ні</label>
+
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary w-50 mx-1 mt-3" id="competentSubmit">Submit</button>
+        </div>
+
+      </div>
+
+      <!-- Proficient level -->
+      <div class="bg-light rounded p-2 my-2">
+        <h3>Proficient</h3>
+        <p>Чи необхідний вам весь контекст задачі</p>
+        <input type="radio" id="proficient1" name="proficient1" value="5">
+        <label for="proficient1">так</label>
+        <input type="radio" id="proficient2" name="proficient1" value="3">
+        <label for="proficient2">в окремих випадках</label>
+        <input type="radio" id="proficient3" name="proficient1" value="2">
+        <label for="proficient3">в загальному</label>
+
+        <p>Чи переглядаєте ви свої наміри до вирішення задачі</p>
+        <input type="radio" id="proficient4" name="proficient2" value="5">
+        <label for="proficient4">так</label>
+        <input type="radio" id="proficient5" name="proficient2" value="3">
+        <label for="proficient5">зрідка</label>
+        <input type="radio" id="proficient6" name="proficient2" value="2">
+        <label for="proficient6">коли є потреба</label>
+
+        <p>Чи здатні ви навчатись у інших</p>
+        <input type="radio" id="proficient7" name="proficient3" value="5">
+        <label for="proficient7">так</label>
+        <input type="radio" id="proficient8" name="proficient3" value="3">
+        <label for="proficient8">зрідка</label>
+        <input type="radio" id="proficient9" name="proficient3" value="2">
+        <label for="proficient9">коли є потреба</label>
+
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary w-50 mx-1 mt-3" id="proficientSubmit">Submit</button>
+        </div>
+
+      </div>
+
+      <!-- Expert level -->
+      <div class="bg-light rounded p-2 my-2">
+        <h3>Expert</h3>
+        <p>Чи обираєте ви нові методи своєї роботи</p>
+        <input type="radio" id="expert1" name="expert1" value="5">
+        <label for="expert1">так</label>
+        <input type="radio" id="expert2" name="expert1" value="3">
+        <label for="expert2">в окремих випадках</label>
+        <input type="radio" id="expert3" name="expert1" value="2">
+        <label for="expert3">вистачає досвіду</label>
+
+        <p>Чи обираєте ви нові методи своєї роботи</p>
+        <input type="radio" id="expert4" name="expert2" value="5">
+        <label for="expert4">так</label>
+        <input type="radio" id="expert5" name="expert2" value="3">
+        <label for="expert5">частково</label>
+        <input type="radio" id="expert6" name="expert2" value="2">
+        <label for="expert6">при емоційному напруженні</label>
+
+        <p>Чи застовуєте рішення задач за аналогією</p>
+        <input type="radio" id="expert7" name="expert3" value="5">
+        <label for="expert7">часто</label>
+        <input type="radio" id="expert8" name="expert3" value="3">
+        <label for="expert8">зрідка</label>
+        <input type="radio" id="expert9" name="expert3" value="2">
+        <label for="expert9">тільки власний варіант</label>
+
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary w-50 mx-1 mt-3" id="expertSubmit">Submit</button>
+        </div>
+
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-primary w-50 mx-1 mt-3" id="submit">Submit</button>
+      </div>
+
+    </div>
+
+    <div class="charts">
+
+      <div style="height: 300px; width: 300px;">
+        <canvas id="noviceChart" width="300" height="300"></canvas>
+      </div>
+
+      <div style="height: 300px; width: 300px;">
+        <canvas id="beginnerChart" width="300" height="300"></canvas>
+      </div>
+
+      <div style="height: 300px; width: 300px;">
+        <canvas id="competentChart" width="300" height="300"></canvas>
+      </div>
+
+      <div style="height: 300px; width: 300px;">
+        <canvas id="proficientChart" width="300" height="300"></canvas>
+      </div>
+
+      <div style="height: 300px; width: 300px;">
+        <canvas id="expertChart" width="300" height="300"></canvas>
+      </div>
+
+      <div style="height: 300px; width: 300px;">
+        <canvas id="allChart" width="300" height="300"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
