@@ -105,7 +105,7 @@ function drawNovice() {
   noviceChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [1, 2, 3, 4, 5],
+      labels: [1, 2, 3, 4, 'сумарна оцінка'],
       datasets: [{
         label: "novice chart",
         data: [novice1, novice2, novice3, novice4, noviceSum],
@@ -157,7 +157,7 @@ function drawBeginner() {
   beginnerChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [1, 2, 3, 4],
+      labels: [1, 2, 3, 'сумарна оцінка'],
       datasets: [{
         label: "beginner chart",
         data: [beginner1, beginner2, beginner3, beginnerSum],
@@ -208,7 +208,7 @@ function drawCompetent() {
   competentChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [1, 2, 3, 4],
+      labels: [1, 2, 3, 'сумарна оцінка'],
       datasets: [{
         label: "competent chart",
         data: [competent1, competent2, competent3, competentSum],
@@ -258,7 +258,7 @@ function drawProficient() {
   proficientChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [1, 2, 3, 4],
+      labels: [1, 2, 3, 'сумарна оцінка'],
       datasets: [{
         label: "proficient chart",
         data: [proficient1, proficient2, proficient3, proficientSum],
@@ -308,7 +308,7 @@ function drawExpert() {
   expertChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [1, 2, 3, 4],
+      labels: [1, 2, 3, 'сумарна оцінка'],
       datasets: [{
         label: "expert chart",
         data: [expert1, expert2, expert3, expertSum],
@@ -368,7 +368,7 @@ function drawAll() {
     data: {
       labels: ['Новачок', 'Твердий початківець', 'Компетентний', 'Досвідчений', 'Експерт'],
       datasets: [{
-        label: "expert chart",
+        label: "Об'єднаний графік",
         data: [noviceSum, beginnerSum, competentSum, proficientSum, expertSum],
         borderWidth: 1,
         backgroundColor: [

@@ -1,0 +1,64 @@
+.App {
+  padding: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+table input{
+  width: 50px;
+}
+td{
+  border-bottom: 1px solid black;
+  padding: 8px;
+}
+.add{
+  display: flex;
+}
+.add div{
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid black;
+}
+.calculateBtn{
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: darkgreen;
+  margin: 4px;
+  border-radius: 5px;
+}
+.text{
+  padding: 12px;
+  border: 1px solid black;
+
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
